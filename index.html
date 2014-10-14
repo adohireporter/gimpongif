@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Gimpongif by adohireporter</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Gimpongif</h1>
+        <p>Guide to using Gimp to caption GIFs</p>
+
+        <p class="view"><a href="https://github.com/adohireporter/gimpongif">View the Project on GitHub <small>adohireporter/gimpongif</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/adohireporter/gimpongif/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/adohireporter/gimpongif/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/adohireporter/gimpongif">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>Guide to captioning GIFs with GIMP</p>
+
+<p>GIFs seem almost impossible to caption. Looking around Google results in no or few programs purposely built to caption GIFs. This tutorial will show you the process of captioning a GIF utilizing GIMP and OpenShot, both free programs and entirely done with Ubuntu, a free operating system.</p>
+
+<p>Pre-requisites:</p>
+
+<ul>
+<li><a href="http://www.ubuntu.com/">Ubuntu</a></li>
+<li><a href="http://www.openshot.org/">OpenShot</a></li>
+<li><a href="http://www.gimp.org/">GIMP</a></li>
+</ul>
+
+<p><a href="http://chiselapp.com/user/saulgoode/repository/script-fu/wiki?name=sg-combine-bg">http://chiselapp.com/user/saulgoode/repository/script-fu/wiki?name=sg-combine-bg</a></p>
+
+<p><img src="https://mediacru.sh/F0PVT4kM07vb.png" alt="">
+First off, download the script. Put simply, it makes gimp take a layer at the bottom, and either overlays it on top of every other layer, or places it behind every other layer.</p>
+
+<p><img src="https://mediacru.sh/5G36ldCPubzy.png" alt="">
+Once it has downloaded, place the script in the above folder. If you can't see the .gimp-2.8 folder, press 'Ctrl + H' to reveal hidden files.</p>
+
+<p><img src="https://mediacru.sh/3LkR1QGu5jck.png" alt="">
+Let's start off with a simple video. The source of all GIFs. Teach a man to fish and he'll eat forever. For this tutorial, images will be displayed with their accompanying description below.</p>
+
+<p><img src="https://mediacru.sh/k5BbmfzKRhhK.png" alt="">
+After opening openshot, we'll be importing the video file into the project by selecting the large green 'plus' button at the top. After it apears in the project files list, simply click and drag it down to the timeline at the bottom of the screen.</p>
+
+<p><img src="https://mediacru.sh/fHmtwCdODBeI.png" alt="">
+Now we have to select the part of the video to convert into a GIF. Try to select no more than 20 seconds. You'll see soon that good GIFs can really jump in size, and you can save yourself a big headache if you plan from the start to end up with a GIF of an acceptable size.
+But when you find the start and end point of your future GIF, use the sissor tool and click on the start and end point to 'cut' the video. Then right click the unnecessary parts of the video and select 'remove clip'. Finish by dragging your GIF video to the beginning.</p>
+
+<p><img src="https://mediacru.sh/JV8a0JnWceQL.png" alt="">
+Now we need to collect some info before we continue. Due to a bug which we aren't sure when it will be fixed (<a href="https://bugs.launchpad.net/openshot/+bug/1084692">https://bugs.launchpad.net/openshot/+bug/1084692</a>) you'll have to manually setup a profile for your video, so that OpenShot will export it in the right resolution. So right click on your video and select properties. Once at properties go to the Audio/Video tab. Here we can see that we need our export settings to be 1280 x720 for resolution, and 24 frames per second.</p>
+
+<p><img src="https://mediacru.sh/a-7M19vOVruN.png" alt="">
+In OpenShot, go to preferences, then the profiles tab. Click on Manage Profiles.</p>
+
+<p><img src="https://mediacru.sh/26SLgDYFIRuc.png" alt="">
+Here we are going to create a profile purpose built for this tutorial. Click on the profiles dropdown and select HD 1080p 60fps. Then click the green 'plus' button to use the profile as a template.</p>
+
+<p><img src="https://mediacru.sh/TTiBGngldyDK.png" alt="">
+Setup the profile using the information we checked on video resolution and frame rate, like so. Then save the profile.</p>
+
+<p><img src="https://mediacru.sh/ZIinmg8ic3oR.png" alt="">
+Now it's time to export. Press 'Ctrl + E' or go to File&gt;Export Video. Select a folder where you want your images to go into, remember we're exporting images so if you don't want 500 images cluttering your desktop be sure to select a new empty folder. Click the advanced tab then under Advanced Options select Image Sequence. OpenShot for now only exports to png. Then under 'Profile' select the profile we just recently created. When you are all done, just click export video and we are done with OpenShot!</p>
+
+<p><img src="https://mediacru.sh/3c-cAYkjxSfE.png" alt="">
+Now open GIMP. File&gt;Open as Layers. You can do this with either an image sequence or a pre-existing GIF. GIMP will open up all the images in a layers which you'll see on the right side of the program.</p>
+
+<p><img src="https://mediacru.sh/ioziuBsOoXwf.png" alt="">
+Remember that thing about GIFs taking up a lot of space. Your first step here is to crop out the black edges that got exported with the video. Simply use the rectangle selection tool to select the part of the video you want to keep, then click on Image&gt;Crop to Selection. This will result in all images in the GIF being smaller resolution which translates into a smaller file size for you.</p>
+
+<p><img src="https://mediacru.sh/XxzoqylQkOni.png" alt="">
+Your next step, and a very important one, is to ensure proper layer order. GIMP produces GIFs starting with the layer at the bottom and working up. So the bottom layer starts the GIF, and the topmost layer ends it. With OpenShot, the layers are imported with the end frame at the top, so you can easily fix this by going to Layer&gt;Stack&gt;Reverse Layer Order</p>
+
+<p><img src="https://mediacru.sh/g9ZiK2SMSnVy.png" alt="">
+Now it's time to add a caption! Go to Image&gt;Canvas Size. I usually add a few hundred pixels to either the height or width, to give me plenty of room to work with my words. Offset determines where the original image will be in the new canvas, in this case at the top left corner. Be sure resize 'All Layers' is selected then click resize.</p>
+
+<p><img src="https://mediacru.sh/O3EhEZcsgqTk.png" alt="">
+Now, having sharply contrasting colors makes for a bad viewing experience. So use your eyedropper tool to select the most used color, in this case a grayish hue.</p>
+
+<p><img src="https://mediacru.sh/WGbd1YcZRT7B.png" alt="">
+Now it's time to make the caption layer. Either 'Ctrl+Shif+N', Layers&gt;New Layer, or press the green 'plus' button underneath the layer list. You'll see the window above. Name it caption, and select the fill type as 'Foreground color'.</p>
+
+<p><img src="https://mediacru.sh/QPN8dfiUl7a0.png" alt="">
+Look for the caption layer on your layer list. If it's not at the top go to Layer&gt;Stack&gt;Layer to Top.</p>
+
+<p><img src="https://mediacru.sh/M426CdUv-gb8.png" alt="">
+Now with the caption layer selected on the layer list, use the rectangle tool to select the area of the original image and press delete. This will result in a layer made up entirely of a grey rectangle, covering up the large white rectangle of all the layers underneath.</p>
+
+<p><img src="https://mediacru.sh/-R4iEBGbYz5q.png" alt="">
+Time to put words to the image. Click the word tool, and type out your caption. Be sure to make it's color contrast against the grey background.</p>
+
+<p><img src="https://mediacru.sh/mL9WRLCTJjYZ.png" alt="">
+If you don't end up using all the space you setup, be sure to re-crop so that the images is just large enough to contain the caption.</p>
+
+<p><img src="https://mediacru.sh/mtHs0hngL6gp.png" alt="">
+After you've finished with your caption, right click on the word layer and merge it down into the caption layer.</p>
+
+<p><img src="https://mediacru.sh/YcWlKPZWMzTI.png" alt="">
+Now that the caption layer and words are one, select it then go to Layer&gt;Stack&gt;Layer to bottom to move it to the botom of the layer list. This is because the script we will be using take the bottommost layer for it's work.</p>
+
+<p><img src="https://mediacru.sh/XTx-bxDQ2vQx.png" alt="">
+It's time now to prepare the final images which will be stitched together into a GIF. Go to Filters&gt;Animation&gt;Overlay background, and watch the magic happen.</p>
+
+<p><img src="https://mediacru.sh/pb10xgmRlntH.png" alt="">
+Make sure before you export the GIF to delete the bottommost caption layer. We don't need it included in the final GIF, taking up space.</p>
+
+<p><img src="https://mediacru.sh/9udWxyWBg0I0.png" alt="">
+Finally, time to make the gif. Go to File&gt;Export As. Go to where you want the exported GIF to be placed, and type the name as: "gifname.gif". This will simply tell GIMP that the exported file is a gif, instead of having to use the large dropdown box to find the GIF format. When you click export, another window will come up. This establishes the soul of the GIF, and each setting is important for what you want your final GIF to be like. First off is the interlace option. I don't usually use this as internet speeds are usually tollerable in this day and age. But having it selected will allow your GIF to load in low quality before shifting to a higher quality, much like a jpg file. Gif comment simply adds a short comment in the file's metadata. BE SURE TO HAVE 'As Animation' SELECTED BECAUSE OTHERWISE YOU'LL GET A STILL IMAGE. Loop forever determines if the GIF plays once or repeats when it hits the last frame. Now for the 'Delay between frames where unspecified'. This is dependent on how fast you want your gif to go. Remember when I had you lookup the framerate of the video. Pull out your calculator and to a simple calculation 1000/framerate. In this case 41.6666 milliseconds for 24fps. Do not set this to below 21. The reason is that firefox and chrome will automatically bump this number up to 100 if it is set too low, as when the first GIFs were created they didn't have this settings delay because the browsers delayed it for them. Bumping it up to 100 is the browsers way of handling really old webpages, and most browsers will handle GIFs as low as 20milliseconds between frames. In this case we need a slower framerate so we'll use 41. Click export and after some chugging, GIMP will spit out a GIF.</p>
+
+<p><img src="https://mediacru.sh/oCRyS427Nsg8.png" alt="">
+Be sure to test out your GIF on a browser before you publish it. Simply use your browser to open the GIF through File&gt;Open File. This ensures that your GIF is working properly, and looks right. As a final note, consider using a GIF conversion service such as gfycat.com or mediacru.sh. These services convert the GIF to a video which takes up a lot less bandwith and size than a GIF, and therefore makes the web better for everybody.</p>
+
+<p><a href="http://gfycat.com/GraciousBlushingGardensnake">http://gfycat.com/GraciousBlushingGardensnake</a>
+<img>
+And here you see the final product of this tutorial.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/adohireporter">adohireporter</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
